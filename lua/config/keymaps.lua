@@ -2,6 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- local map = LazyVim.safe_keymap_set
+
 local function map(mode, lhs, rhs, opts)
   local keys = require("lazy.core.handler").handlers.keys
   ---@cast keys LazyKeysHandler
@@ -32,7 +34,7 @@ map("n", "<M-h>", "<C-w>h")
 map("n", "<M-j>", "<C-w>j")
 map("n", "<M-k>", "<C-w>k")
 map("n", "<M-l>", "<C-w>l")
-map("n", "<C-l>", "zz")
+-- map("n", "<C-l>", "zz")
 map("n", "<C-a>", "^")
 
 map("n", "J", "mzJ`z")
@@ -57,4 +59,5 @@ if vim.g.neovide then
   -- vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste in insert mode
   vim.keymap.set('i', '<D-v>', '<C-R>+') -- Paste in insert mode
 end
+
 
