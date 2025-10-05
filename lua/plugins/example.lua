@@ -41,9 +41,6 @@ if true then
       "nvim-treesitter/nvim-treesitter-context",
     },
     {
-      "nvim-treesitter/playground",
-    },
-    {
       "mbbill/undotree",
       config = function()
         vim.keymap.set("n", "<C-x>u", "<cmd>UndotreeToggle<cr><C-w>h")
